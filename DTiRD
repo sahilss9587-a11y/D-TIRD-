@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini Game Platform</title>
+
+<style>
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+button{
+padding:15px;
+margin:10px;
+font-size:18px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎮 Online Game Platform</h1>
+
+<button onclick="mines()">Mines</button>
+<button onclick="chicken()">Chicken Cross</button>
+<button onclick="penalty()">Penalty Shoot</button>
+
+<script>
+
+function mines(){
+
+let mine=Math.floor(Math.random()*5)
+
+let guess=prompt("Choose number 0-4")
+
+if(guess==mine){
+
+alert("💣 Mine Exploded")
+
+}else{
+
+alert("✅ Safe Box")
+
+}
+
+}
+
+function chicken(){
+
+let win=Math.random()
+
+if(win>0.5){
+
+alert("🐔 Chicken Crossed Successfully")
+
+}else{
+
+alert("🚗 Chicken Hit")
+
+}
+
+}
+
+function penalty(){
+
+let player=Math.floor(Math.random()*3)
+let keeper=Math.floor(Math.random()*3)
+
+if(player==keeper){
+
+alert("🧤 Saved")
+
+}else{
+
+alert("⚽ GOAL")
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
